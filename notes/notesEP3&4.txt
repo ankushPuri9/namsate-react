@@ -1,0 +1,23 @@
+#props/ propertis 
+    .Props are just a nornal arguments of the component. Component are simple functions in react .
+    . <Conponnet name="abc" lastName="xyz" /> passing properties to components
+    .In react Conponents are JS function. are passing props are like passing ar to function
+    .Componets = (props)=>{
+        return(
+            console.log(props)
+            //{
+                name: "abc",
+                lastName: "Xyz"
+            }
+        )
+    }
+    .Props are Object.
+
+# Config driven UI 
+# In conponent call looping we should have uniqe key proprty / or In looping we should provide unique id.
+    .<Component key={unique.id} data={dataVariable} />
+    .We provide keys because rect can easily identified elements in DOM.
+    .Unique key help to render only newly added elements in the DOM.
+    .Unique key help to optimized the code and make rendering fast and make app faster.
+    .If we will not provide any unique key than all the elements are rerendering in DOM and give warning in console. 
+    .Using index as a key is not recommended by react 

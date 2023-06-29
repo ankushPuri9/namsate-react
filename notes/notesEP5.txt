@@ -1,0 +1,22 @@
+.............Hooks..........
+. Hooks are normal js utility function
+# We have two types of most important Hook
+    -useState() - State variable of react
+    -useEffect()
+
+. Whenever state variable change react rerander it's components 
+. React is good at DOM manipulate
+
+# Reconcilation Algo (React Fiber)
+    - Virtual DOM 
+        . VD is object representation on actual DOM
+        . It is a object of actual DOM
+    -Diff Algo
+        . Diff Algo find difference between old VD and new VD and then update Actuall DOM
+        . It easy to find differeance in object as compare to HTML
+        . This process is called React Fiber
+
+# Why react is fast ?
+    . React is doing efficiently DOM manipulate
+    . React using deff algo to find out the difference bwt old and new VD
+    . After that it will only update modified DOM elemets

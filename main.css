@@ -1,3 +1,35 @@
 #heading{
     color: red;
 }
+.logo{
+    width: 100px;
+}
+.nav-bar > ul {
+    list-style: none;
+    display: inline-flex;
+    margin: 20px;
+
+}
+.container{
+    display: flex; 
+    justify-content: space-between;  
+}
+.nav-bar > ul >li {
+    margin: 10px;
+}
+.root{
+    margin: 5px;
+}
+.resturentList {
+    display: flex;
+    flex-wrap: wrap;
+}
+.card {
+    width: 200px;
+    border: 1px solid black;
+    margin: 10px;
+    padding: 10px;
+}
+.card > img {
+    width: 100%;
+}
