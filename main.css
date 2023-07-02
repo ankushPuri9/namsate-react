@@ -33,3 +33,6 @@
 .card > img {
     width: 100%;
 }
+.filter-container {
+    display: flex;
+}

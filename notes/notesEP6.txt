@@ -1,0 +1,17 @@
+.......UseEffect hook.....
+
+# Use this look to call backend API's
+# UseEffect() fun will call after component render
+
+# What is optional chaining
+# Shimmer UI
+    -Shimmer UI is like showing layout or shape of the page untill we didn't get the actual data from API.
+
+# Conditional rendering....
+    - Render component on the bases of condition
+
+# How Const variable will update in useSate()
+    - When we update state variable than are componnet will reRender
+    - So when component reRender than const variable we recreate with new value
+    
+# Whenever we update state variable react triggers reconciliation cycle and reRender component. 
