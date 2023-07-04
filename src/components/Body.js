@@ -1,6 +1,6 @@
 import { ResturentCards } from "./ResturentCard";
-import { restrautListData } from "../utils/mokeData";
 import { useEffect, useState } from "react";
+import { Link } from "react-router-dom";
 
 export const AppBody = () => {
   console.log("render");
@@ -28,10 +28,15 @@ export const AppBody = () => {
     const data = await fetch(
       "https://www.swiggy.com/dapi/restaurants/list/v5?lat=31.3866358&lng=76.3420206&page_type=DESKTOP_WEB_LISTING"
     );
+
     const resList = await data.json();
 
-    setRestrautList(resList?.data?.cards[0]?.data?.data?.cards);
-    setfilterResList(resList?.data?.cards[0]?.data?.data?.cards);
+    const allResturents = resList.data.cards.filter((data) => {
+      return data.cardType === "seeAllRestaurants";
+    });
+
+    setRestrautList(allResturents[0]?.data?.data?.cards);
+    setfilterResList(allResturents[0]?.data?.data?.cards);
   };
 
   // UseEffect to fetch data.
@@ -91,7 +96,14 @@ export const AppBody = () => {
       </div>
       <div className="resturentList">
         {filterResList.map((resturent) => {
-          return <ResturentCards {...resturent.data} key={resturent.data.id} />;
+          return (
+            <Link
+              to={`/restaurants/${resturent.data.id}`}
+              key={resturent.data.id}
+            >
+              <ResturentCards {...resturent.data} />
+            </Link>
+          );
         })}
       </div>
     </>

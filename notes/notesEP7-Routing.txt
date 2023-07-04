@@ -1,0 +1,35 @@
+..................Routing............
+
+# useEffect(()=>{callback function},[Dependancy Array])
+    - Dependancy Array is optional 
+    - If there is Dependancy Array than useEffect only call onces initial render
+    - If Dependancy array is empty than it call on every render
+    - If there is value in dependancy array than it calls when dependancy value change 
+
+# UseSate  
+    - Always use useSate inside of component 
+    - Never use useState in condition or function
+    - Always create on the top of program
+
+
+----------Routing............
+
+# Routing 
+    - Use React route DOM lib for routing
+    - npm i react-router-dom 
+
+- CreateBrowserRoute import from the rect-route-dom lib.
+    - CreateBrowserRoute is responsible to create route configration.
+    - In CreateBrowserRoute configration we define route name and render elemenrts
+
+- RouteProvider  import from the rect-route-dom lib. 
+    - RouteProvider provide routes to our app
+    - root.render(<RouteProvider route={routeConfigration} />)
+
+- useRouteError hook to get error details from react-router-dom
+
+- We use Link from rect-route-dom to link component/pages
+    -Never use <a> tag ton link components.it refresh whole page.
+    -Always use Link bcz it refresh only component
+
+- useParams() Hook to get param from URL
