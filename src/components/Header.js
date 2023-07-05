@@ -11,7 +11,9 @@ export const Header = () => {
       <div className="nav-bar">
         <ul>
           <li>
-            <Link to="/">Home</Link>
+            <Link to="/">
+              <button>Home</button>
+            </Link>
           </li>
           <li>
             <Link to="/about">About</Link>

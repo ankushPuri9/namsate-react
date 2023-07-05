@@ -1,0 +1,75 @@
+........Class Componnets.......
+# Class component extend React.Component
+# USe render() function to return the JSX.
+    - render{
+        return(
+            <div>
+                <h1>hello<h1>
+            </div>
+        )
+    }
+
+# State variable in class compoent ..
+    - There is NO state variable hooks in class component.
+    - this.state={} is use to crate a state variable in class
+    - Always carte state variable in side constructor function
+    - Eg:-
+        this.state = {
+            count:0,
+            count2: 1
+        }
+    - We will use setState({}) to update state variable.
+    -Eg:-
+        this.setState({
+            count: this.count+1
+        })
+    - It will find the diff and update anly effected value
+
+# componentDidMount()......
+    - componentDidMount() function will call when component is mount to dom
+    - componentDidMount() function will call when component is finish render
+    - componentDidMount() use to make a API call in class base function
+
+# Life Cycle of Class Base Components......(Parent have one child component)
+    -1 Parent constructor will call
+    -2 Parent rendar will call
+    -3 Clild constructor will call
+    -4 Child render will call.
+    -5 Child componentDidMount will call when finish render
+    -6 Parent componentDidMount will call when finish render
+
+# Life Cycle of Class Base Components......(Parent have two or more child component)
+    -1 Parent constructor will call
+    -2 Parent rendar will call
+    -3 Clild1 constructor will call
+    -4 Child1 render will call.
+    -5 Clild2 constructor will call
+    -6 Child2 render will call.
+    -7 Child1 componentDidMount will call when finish render
+    -8 Child2 componentDidMount will call when finish render
+    -9 Parent componentDidMount will call when finish render
+    
+    - React optimized the rendring face.It will batch the render face and commit face
+    - React will complete all render face(constructor and render) than start commit(Update Dom and componentDidMOunt) face  
+
+# ComponentDidUpdate():-> it will call after componentDidMount in update face
+        - It wil call after every render/update
+        - ComponentDidUpdate(prevProps, prevState)
+        - It has prevProps and prevState to compare with new updated state
+
+# CompopnentWillUnmount() - > It will call when compont will unmount from the DOM
+        -   It will call when we change the component
+
+     
+    
+# Rect Lifecycle refrance :-
+    -https://www.google.com/imgres?imgurl=https%3A%2F%2Fprojects.wojtekmaj.pl%2Freact-lifecycle-methods-diagram%2Fogimage.png&tbnid=Pit_LI9vjpZB_M&vet=12ahUKEwivgY3L5fX_AhWelWMGHcxDC-oQMygBegUIARDkAQ..i&imgrefurl=https%3A%2F%2Fprojects.wojtekmaj.pl%2Freact-lifecycle-methods-diagram%2F&docid=BbP254hc3TSnPM&w=1831&h=961&q=react%20lifecycle&ved=2ahUKEwivgY3L5fX_AhWelWMGHcxDC-oQMygBegUIARDkAQ
+
+# Why we use Super(props) in class constructor refrance:-
+    -https://www.turing.com/kb/beginners-guide-to-super-and-super-props-in-react
+
+Questions :-
+
+1. Why we use Super() in class components
+2. We we make componentDidMount() async
+3. We we can't make useEffect() hook async

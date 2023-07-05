@@ -36,3 +36,11 @@
 .filter-container {
     display: flex;
 }
+.userInfo {
+    width: 100%;
+    border: 1px solid black;
+}
+.user-img {
+    width: 15%;
+    /* height: 127px; */
+}
