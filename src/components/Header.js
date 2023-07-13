@@ -1,6 +1,9 @@
 import { LOGO_URL } from "../utils/constaints";
 import { Link } from "react-router-dom";
+import { useContext } from "react";
+import userContext from "../utils/context/userContext";
 export const Header = () => {
+  const { user } = useContext(userContext);
   return (
     <div className="container">
       <div className="logo-container">
@@ -10,6 +13,11 @@ export const Header = () => {
       </div>
       <div className="nav-bar">
         <ul>
+          <li>
+            Name:-{user.name}
+            <br></br>
+            Email :- {user.email}
+          </li>
           <li>
             <Link to="/">
               <button>Home</button>

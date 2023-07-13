@@ -1,0 +1,53 @@
+........................Custom Hooks....................
+
+# Single Responsibility Principle.
+
+    - each component has single responsibility.
+    -Eg :-
+        . If we have header component that it should have header code
+        . Header component should have single responsibility to take care of header only.
+
+..........Custom Hooks..................................
+
+# Custom looks are just a function component name start with use (useHookName).
+
+    - We will build custom look to perform some task and make our code clean
+    - We should start hook name with use bcz it's react recomanded
+
+................Spliting app in different bundles..........
+
+# Chunking/code spliting/lazy loading/Dynamic loading/on Demand loading/ Dynamic import
+
+    - Loading component in js file when we call it
+    - lazy loading is splitting app int0 chunks and load on demand
+    - lazy loading will increse the performance of the app
+    - In lazy loading we will Splite code in chunks
+    - On demand component we will make new bundle (Making new js in build.)
+
+    # lazy() function for lazy loading
+        - We use lazy(()=>import("Component path")) function from rect for load component on demand.
+        - Eg:- const MarkdownPreview = lazy(() => import('./MarkdownPreview.js'));
+        - it will load component when we call that component and make new bundle for this component
+        - It will make a new bundle.js file for on demand componet .it's also call spliting the application.
+
+
+    # Lazy-loading components with Suspense .
+
+        - When we lazy load the component it will give us Suspend rendaring error.
+        - Suspend rendaring means our component load fist but lazy() function load function later .
+        -  <Suspense fallback={<Loading />}> <MarkdownPreview /> </Suspense> to resolve this we use Suspense Component.
+        - <Suspense> is react Component
+        - fallback :- We use fallback to show loading untill our component will not load .
+        - In fallback we can write any JSX code to show loading .
+
+# Notes :--
+
+    - If use name export in compoenet which use for lazy loading:-
+        - const Contact = lazy(() =>
+            import("./components/Contact").then((module) => ({ default: module.Contact }))
+            );
+        - We have to resolve the promise.
+    - If we use default export to expoert the component which use in lazy loading.
+        - React.lazy takes a function that must call a dynamic import(). This must return a Promise which resolves to a module with a default export containing a React component.
+        - Default expoert resole promise
+        - const Contact = lazy(() => import("./components/Contact"));

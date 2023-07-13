@@ -1,0 +1,44 @@
+..............................Data Sharing................
+
+# Props Drilling
+
+    - when we pass pross from parents to multiple child it's called props drilling
+        - parent (props)
+            child (props)
+                child (props)
+                    child (props)
+                        child (props)
+# Lifting the state up......
+    - When parent component hold the state and control the child behaver
+    - eg:- toggle the child component.but tiggle state variable is manage by parent componnet 
+
+# Rect dev tool in browser :-
+    - Componet :- It help to debug componnet state and props 
+    -Profiler :- It help to check the rendraing speed on every component 
+
+---------------------------React context to share the data...............
+
+# context:- We use context to share data all across the app.So any componnet get that data
+            - It is crearted by the react. 
+            - It is like a central space where we can keep the things and any one can access it.
+            - We use context to share data in all the components it's different that props and stats
+            - States and props are component spacific
+
+# createContext() :- use createContext({initial data}) from react to cretate a context.
+# useContext() :- use useContext(contextName)  from react to get a context
+
+# How to use Context in classbase component bcz we don't have hooks in class components
+    - Import context eg:- import userContext from "../utils/userContext"
+    - use like a component
+        <userContext.Consumer>
+        { {user} => console.log(user.name)}
+        </userContext.Consumer>
+
+# Update Context value :- Use context name and provider to update context value.
+    -<ContaxtName.provider value={value}> Component Name<ContaxtName.provider>
+    -<ContaxtName.provider value={value}> Component Name(In which we want contaxt auto update)<ContaxtName.provider>
+    -    <section className="section">
+      <LevelContext.Provider value={level}>
+        {children}
+      </LevelContext.Provider>
+    </section>

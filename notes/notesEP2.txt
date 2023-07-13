@@ -1,58 +1,69 @@
 # What is NPM
+
     . NPM is just a package manager it's not node package manager .
     . Npm first was created as a package manager for Node.js so we call it node package manager
+
 # What is package.json
+
     . Package.json is configration of NPM
 
 # What is bundler package ?
-    . bundler packages bundle your app or make a package of you app to production ready 
+
+    . bundler packages bundle your app or make a package of you app to production ready
     . bundler packages are webpack , parcel etc.
 
 # Type of dependancies in package.json
-    . Dev dependancies :- Dev dependancies use is develoment face 
-    . Normal dependancies :- Normal dependancies use mostaly on production 
-    . Transitive dependency:- when one dependency depend on other dependency 
+
+    . Dev dependancies :- Dev dependancies use is develoment face
+    . Normal dependancies :- Normal dependancies use mostaly on production
+    . Transitive dependency:- when one dependency depend on other dependency
     . We use -D to install dev dependancies exp:- npm install -D parcel
 
 # What is Package.lock.json
+
     . It keep records of exact veraion of package.
-    . package.json keep approximate version of package but package.lock.json keep exact vesrion of package 
+    . package.json keep approximate version of package but package.lock.json keep exact vesrion of package
 
 # What is node modules
+
     . Node Module has all the code of packages which we fetch from NPM.
     . It contains all data of packages/dependancies
 
 # NPX (Parcel commands)
-    . We use NPX to execute the packages. 
+
+    . We use NPX to execute the packages.
     . NPX parcel index.html
     . NPX parcel build index.htm :- Production build
 
 # Parcel package
-    . It's make dev build 
-    . It's create local sever 
+
+    . It's make dev build
+    . It's create local sever
     . HMR = Hot Module Replacement (AUto refresh browser)
     . It use file watching Algorithem to reflect changes in browser - writen in c++
     . Using caching for faster build
     . Image Optimization
     . Minification files in prodution build
     . Bundling file
-    . Compressing file for prodution 
+    . Compressing file for prodution
     . Consistent Hashing
-    . Code Splitting 
+    . Code Splitting
     . Differential Bundling - Give support to older browsers
-    . Dignostic 
+    . Dignostic
     . Error Handling
     . HTTS
     . Tree Shaking - Remove unused code
     . Different build for prod and dev
 
 # BrowsweList
-    .Browserlist use to make our app Compatible to all the browsers 
+
+    .Browserlist use to make our app Compatible to all the browsers
 
 # JSX :-
+
     . JSX is defferent and React is defferent .
     . JSX is syntex to write HTML in react
-    . JSX is not a HTM in js. 
+    . JSX is not a HTM in js.
     . if we want to give class in JSX :- we use ClassName="xyz" not class like HTML. That's why JSX is not a HTML
     . it's syntax like HTML or XML
     . JSX is not pure or valid javascipt bcz js engine not understand JSX
@@ -67,7 +78,7 @@
             <h1>
                 hello code.
             </h1>
-        ) 
+        )
     .JSX is also take care of CROSS attacks 0
     .JSX have only one root parent element.
         exp:-
@@ -75,8 +86,8 @@
                 <div>
                 dfgdfg
                 <div> </div>
-                
-                </div>  
+
+                </div>
                          --valid(Single root parent element )
             ),
              (
@@ -85,31 +96,31 @@
             )
 
 # React Fragment
+
     .Using React fregment we can rape more than one root element in JSX.
           (     <React.Fragment>
-                    <div>dfgdfg</div> 
+                    <div>dfgdfg</div>
                     <div>dfgdfg</div>
                 </React.Fragment>
-            ) 
-    .This is act as a empty tags 
+            )
+    .This is act as a empty tags
     .We can use empty tag as well
          (     <>
-                    <div>dfgdfg</div> 
+                    <div>dfgdfg</div>
                     <div>dfgdfg</div>
                 </>
-            ) 
-
+            )
 
 # React Components :-
+
     .Two type of components :-
         Class Based components -- OLD Menthod
         Functional Based Components -- NEW Method
+
 .Functional Component :-
-    . Functional Component is simple javascipt function.
-    . Functional Compoent name always satrt with capital latter.
-.Component Composition:-  is put component inside component
-
-
+. Functional Component is simple javascipt function.
+. Functional Compoent name always satrt with capital latter.
+.Component Composition:- is put component inside component
 
 Questions:--
 .can we have multiple roots tags

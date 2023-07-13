@@ -1,12 +1,14 @@
 import { ResturentCards } from "./ResturentCard";
-import { useEffect, useState } from "react";
+import { useEffect, useState, useContext } from "react";
 import { Link } from "react-router-dom";
+import userContext from "../utils/context/userContext";
 
 export const AppBody = () => {
-  console.log("render");
   const [restrautList, setRestrautList] = useState([]);
   const [searchText, setsearchText] = useState("");
   const [filterResList, setfilterResList] = useState([]);
+
+  const { user, setUSer } = useContext(userContext);
 
   // Top Rated filter
   function filterResData() {
@@ -92,6 +94,18 @@ export const AppBody = () => {
           >
             Reset
           </button>
+        </div>
+        <div>
+          <input
+            name="setUSer"
+            value={user.name}
+            onChange={(e) => {
+              setUSer({
+                ...user,
+                name: e.target.value,
+              });
+            }}
+          />
         </div>
       </div>
       <div className="resturentList">
